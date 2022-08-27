@@ -1,0 +1,128 @@
+body > #background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(60deg, rgba(158,175,175,1) 30%, rgba(4,56,63,1) 80%);
+    clip-path: polygon(0 0, 36% 0, 100% 76%, 16% 100%, 0 100%, 0% 50%);
+    position: absolute;
+    z-index: -1;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.main-grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:repeat(3, 20fr);
+    grid-template-rows: 10fr repeat(2, auto) 10fr;
+    align-items: center;
+}
+
+.brand{
+    width: 100%;
+    object-fit: cover;
+}
+.menu{
+    font-size:0.7rem;
+    font-weight: 450;
+    list-style: none;
+    grid-column: 2/ span 4;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+li{
+    margin: .5rem;
+    text-align: center;
+    font-weight: 600;
+}
+a, a:link, a:visited, a:active{
+    color: #04383f;
+}
+a:hover{
+    color: #f2efea;
+}
+.main-text{
+    justify-items: center;
+    align-items: center;
+    grid-column: 1/-1;
+    overflow: visible;
+}
+.gallery{
+    width: 80%;
+    border-radius: 10%;
+    object-fit:cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    flex-grow: 1;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+h1 {
+    margin: 0.5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #04383f;
+    font-weight: 800;
+    font-size: 2rem;
+    flex-grow: 1;
+}
+h2{
+    margin: 0.5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #04383f;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+h3{
+    margin: 0.5rem;
+    padding: 0px 30px;
+    line-height: 5vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #04383f;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.7rem;
+    flex-grow: 1;
+}
+.video{
+    grid-column: 1/ span 4;
+    justify-content: center;
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    object-fit: cover;
+}
+#painting, #construction, #gathering{
+    padding: .5rem .5rem;
+}
+p{
+    color: #527272;
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width:584px){
+    .menu{
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 0.5%;
+   } 
+   li{
+    font-size: 1.1rem;
+   }
+}
